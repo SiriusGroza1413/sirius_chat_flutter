@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sirius_chat/Src/Screens/login_screen.dart';
 import 'package:sirius_chat/Src/Screens/welcome_screen.dart';
 
+import 'Src/Screens/registration_screen.dart';
+
 void main() {
   runApp(
     MaterialApp(
@@ -18,6 +20,7 @@ void main() {
       routes: <String, WidgetBuilder>{
         LoginScreen.routeName: (BuildContext context) => LoginScreen(), 
         WelcomeScreen.routeName: (BuildContext context) => WelcomeScreen(),
+        RegistrationScreen.routeName: (BuildContext context) => RegistrationScreen()
       },
     )
   );

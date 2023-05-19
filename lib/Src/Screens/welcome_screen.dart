@@ -26,13 +26,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               height: 40.0,
             ),
             AppButton(
-              color:Colors.purple.shade600,
+              color:Colors.purpleAccent,
               onPressed: () {Navigator.pushNamed(context, '/login');},
               name: 'Log in',
             ),
             AppButton(
-              color: Colors.indigoAccent.shade200,
-              onPressed: () {},
+              color: Colors.purpleAccent,
+              onPressed: () {Navigator.pushNamed(context, '/registration');},
               name: 'Sign up',
             )
           ],
