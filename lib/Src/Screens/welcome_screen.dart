@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sirius_chat/Src/Widgets/app_button.dart';
+
+import '../Widgets/app_icon.dart';
 
 class WelcomeScreen extends StatefulWidget {
    static const String routeName = '';
@@ -9,30 +12,6 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
 
-  Widget getButton(Color color, String text, VoidCallback onPressed){
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 11.0),
-      child: Material(
-        elevation: 15.0,
-        color: color,
-        borderRadius: BorderRadius.circular(30.0),
-        shadowColor: color,
-        child: SizedBox(
-          height: 50.0,
-          child: TextButton(
-            child: Text(
-              text,
-              style: TextStyle(
-                color: Colors.white70
-              ),
-            ),
-            onPressed: onPressed
-          )
-        )
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,32 +21,20 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('images/icono.png'),
-                Text(
-                  'VS Chat App',
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w700
-                  ),
-                ),
-              ],
-            ),
+            AppIcon(),
             SizedBox(
               height: 40.0,
             ),
-            getButton(
-              Colors.purple.shade600,
-              "Log In",
-              () {Navigator.pushNamed(context, '/login');}
+            AppButton(
+              color:Colors.purple.shade600,
+              onPressed: () {Navigator.pushNamed(context, '/login');},
+              name: 'Log in',
             ),
-            getButton(
-              Colors.indigoAccent.shade200, 
-              'Sign Up',
-              () {}
-            ),
+            AppButton(
+              color: Colors.indigoAccent.shade200,
+              onPressed: () {},
+              name: 'Sign up',
+            )
           ],
         ),
       )
