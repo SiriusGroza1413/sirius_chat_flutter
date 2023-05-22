@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "461414281548",
+    "project_id": "flutter-chat-1ec9f",
+    "storage_bucket": "flutter-chat-1ec9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461414281548:android:199cc7321bd752c5d61fe9",
+        "android_client_info": {
+          "package_name": "com.example.sirius_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461414281548-2e38260k807hkjd30n5063silruti3uc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM1xW-SKrEHJ0RFnGp-hzThtMfLpC0zLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "461414281548-2e38260k807hkjd30n5063silruti3uc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

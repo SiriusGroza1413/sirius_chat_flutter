@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 
+typedef ValueChange<T> = void Function(T);
+
 class AppTextfield extends StatelessWidget {
 
   final String inputText;
+  final ValueChange<String>? onChanged;
+  final obscureText;
 
- const AppTextfield({required this.inputText});
+ 
+
+ const AppTextfield({required this.inputText, this.onChanged, this.obscureText});
 
   @override
   Widget build(BuildContext context){
+    
     return TextField(
       decoration: InputDecoration(
         contentPadding: EdgeInsets.symmetric(horizontal:  10.0),
@@ -31,7 +38,10 @@ class AppTextfield extends StatelessWidget {
             width: 2.0,
           )
         )
-      )
+      ),
+      onChanged: onChanged,
+      textAlign: TextAlign.center,
+      obscureText: obscureText == null ? false : obscureText
     );
   }
 }

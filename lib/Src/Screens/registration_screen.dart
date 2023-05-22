@@ -11,6 +11,10 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+
+  late String _email;
+  late String _password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,11 +25,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             AppIcon(),
-            SizedBox(height: 20.0),
-            AppTextfield(inputText: 'Ingresar email'),
-            SizedBox(height: 15.0),
-            AppTextfield(inputText: 'Ingresar contraseña'),
-            SizedBox(height: 20.0),
+             SizedBox(height: 20.0),
+            AppTextfield(
+              inputText: 'Ingresar email',
+              onChanged: (value) {_email = value;},
+              ),
+             SizedBox(height: 15.0),
+            AppTextfield(
+              inputText: 'Ingresar contraseña',
+              onChanged: (value) {_password = value;},
+              obscureText: true,
+              ),
+             SizedBox(height: 20.0),
             AppButton(
               color: Colors.purpleAccent,
               onPressed: () {},
